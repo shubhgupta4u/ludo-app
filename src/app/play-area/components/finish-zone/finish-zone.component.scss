@@ -1,0 +1,16 @@
+@import '../../../../variables.scss';
+
+.finish-container{
+    width: 18vw;
+    height: 18vw;
+}
+.ludo_home
+		{
+			height: 0;
+			width: 0;
+			border-left:9vw solid $red-player-color;
+			border-right:9vw solid $yellow-player-color;
+			border-top:9vw solid $green-player-color;
+			border-bottom:9vw solid $blue-player-color;
+			float: left;	
+		}

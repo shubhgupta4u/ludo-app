@@ -1,0 +1,62 @@
+@import '../../../../variables.scss';
+
+.path-vertical {
+    width: 18vw;
+}
+
+.path-horizontal {
+    width: 36vw;
+}
+
+.path-container-inside {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.cell {
+    width: 6vw;
+    height: 6vw;
+    border: 0.5px solid $border-color;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+}
+
+.red {
+    background-color: $red-player-color;
+}
+
+.yellow {
+    background-color: $yellow-player-color;
+}
+
+.green {
+    background-color: $green-player-color;
+}
+
+.blue {
+    background-color: $blue-player-color;
+}
+
+.icon {
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+    line-height: 6vw;
+    font-size: 3vw;
+}
+
+.icon-red {
+    color: $red-player-color;
+}
+.icon-yellow {
+    color: $yellow-player-color;
+}
+
+.icon-green {
+    color: $green-player-color;
+}
+
+.icon-blue {
+    color: $blue-player-color;
+}

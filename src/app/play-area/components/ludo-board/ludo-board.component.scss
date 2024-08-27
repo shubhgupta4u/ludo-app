@@ -1,0 +1,11 @@
+@import '../../../../variables.scss';
+
+.board-container{   
+    overflow: auto;
+    padding: 4vw 0;
+}
+.board-container-inside{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

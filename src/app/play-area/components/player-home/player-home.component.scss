@@ -1,0 +1,36 @@
+@import '../../../../variables.scss';
+
+.home-container{
+    width: 36vw;
+    height: 36vw;
+    padding: 6vw;
+    border: 1px solid $border-color;    
+}
+.home-container-inside{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid $border-color;
+    background-color: white;
+    width: 24vw;
+    height: 24vw;
+}
+.token-home{
+    width: 7vw;
+    height: 7vw;
+    margin: 2vw;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+}
+.red{
+    background-color: $red-player-color;
+}
+.yellow{
+    background-color: $yellow-player-color;
+}
+.green{
+    background-color: $green-player-color;
+}
+.blue{
+    background-color: $blue-player-color;
+}
