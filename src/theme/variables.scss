@@ -1,2 +1,41 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+@use 'sass:string';
+@use 'sass:math';
+@import '@ionic/angular/css/core.css';
+
+:root {
+  --viewport-width: 100vw;
+  --viewport-height: 100vh;
+}
+
+
+$red-player-color: red;
+$blue-player-color: blue;
+$yellow-player-color: yellow;
+$green-player-color: green;
+$border-color: black;
+$home-background: white;
+
+
+
+@media (min-aspect-ratio: 1/1) {
+  $width-mode: "vh";
+}
+
+@media (max-aspect-ratio: 1/1) {
+  $width-mode: "vw";
+}
+
+// $width-mode:set-width-mode(100vw,100vh);
+$width-mode: "vw";
+$play-zone-size: string.insert(#{100}, $width-mode, 100);
+$board-home-size: string.insert(#{36}, $width-mode, 100);
+$board-home-inner-size: string.insert(#{24}, $width-mode, 100);
+$token-home-size: string.insert(#{7}, $width-mode, 100);
+$finish-zone-size: string.insert(#{18}, $width-mode, 100);
+
+$landscape-width-mode: "vh";
+$landscape-play-zone-size: string.insert(#{100}, $landscape-width-mode, 100);
+$landscape-board-home-size: string.insert(#{36}, $landscape-width-mode, 100);
+$landscape-board-home-inner-size: string.insert(#{24}, $landscape-width-mode, 100);
+$landscape-token-home-size: string.insert(#{7}, $landscape-width-mode, 100);
+$landscape-finish-zone-size: string.insert(#{18}, $landscape-width-mode, 100);

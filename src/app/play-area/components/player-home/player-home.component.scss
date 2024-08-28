@@ -1,9 +1,6 @@
-@import '../../../../variables.scss';
+@import '../../../../theme/variables.scss';
 
 .home-container{
-    width: 36vw;
-    height: 36vw;
-    padding: 6vw;
     border: 1px solid $border-color;    
 }
 .home-container-inside{
@@ -11,14 +8,9 @@
     flex-wrap: wrap;
     justify-content: center;
     border: 1px solid $border-color;
-    background-color: white;
-    width: 24vw;
-    height: 24vw;
+    background-color: $home-background;
 }
 .token-home{
-    width: 7vw;
-    height: 7vw;
-    margin: 2vw;
     border-radius: 50%;
     border: 1px solid $border-color;
 }
@@ -34,3 +26,37 @@
 .blue{
     background-color: $blue-player-color;
 }
+
+@media (min-aspect-ratio: 1/1) {
+    .home-container{
+        width: $landscape-board-home-size;
+        height: $landscape-board-home-size;
+        padding: calc($landscape-board-home-size/6); 
+    }
+    .home-container-inside{
+        width: $landscape-board-home-inner-size;
+        height: $landscape-board-home-inner-size;
+    }
+    .token-home{
+        width: $landscape-token-home-size;
+        height: $landscape-token-home-size;
+        margin: calc($landscape-board-home-size/18);
+    }
+  }
+  
+  @media (max-aspect-ratio: 1/1) {
+    .home-container{
+        width: $board-home-size;
+        height: $board-home-size;
+        padding: calc($board-home-size/6); 
+    }
+    .home-container-inside{
+        width: $board-home-inner-size;
+        height: $board-home-inner-size;
+    }
+    .token-home{
+        width: $token-home-size;
+        height: $token-home-size;
+        margin: calc($board-home-size/18);
+    }
+  }

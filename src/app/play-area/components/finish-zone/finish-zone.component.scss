@@ -1,16 +1,29 @@
-@import '../../../../variables.scss';
+@import '../../../../theme/variables.scss';
 
-.finish-container{
-    width: 18vw;
-    height: 18vw;
-}
-.ludo_home
-		{
-			height: 0;
-			width: 0;
-			border-left:9vw solid $red-player-color;
-			border-right:9vw solid $yellow-player-color;
-			border-top:9vw solid $green-player-color;
-			border-bottom:9vw solid $blue-player-color;
-			float: left;	
-		}
+@media (min-aspect-ratio: 1/1) {
+    .finish-container {
+		width: $landscape-finish-zone-size;
+		height: $landscape-finish-zone-size;
+	}
+	
+	.ludo_home {
+		border-left: calc($landscape-finish-zone-size/2) solid $red-player-color;
+		border-right: calc($landscape-finish-zone-size/2) solid $yellow-player-color;
+		border-top: calc($landscape-finish-zone-size/2) solid $green-player-color;
+		border-bottom: calc($landscape-finish-zone-size/2) solid $blue-player-color;
+	}
+  }
+  
+  @media (max-aspect-ratio: 1/1) {
+    .finish-container {
+		width: $finish-zone-size;
+		height: $finish-zone-size;
+	}
+	
+	.ludo_home {
+		border-left: calc($finish-zone-size/2) solid $red-player-color;
+		border-right: calc($finish-zone-size/2) solid $yellow-player-color;
+		border-top: calc($finish-zone-size/2) solid $green-player-color;
+		border-bottom: calc($finish-zone-size/2) solid $blue-player-color;
+	}
+  }

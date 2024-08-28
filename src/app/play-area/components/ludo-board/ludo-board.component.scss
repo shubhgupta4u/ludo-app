@@ -1,11 +1,14 @@
-@import '../../../../variables.scss';
+@import '../../../../theme/variables.scss';
 
 .board-container{   
-    overflow: auto;
-    padding: 4vw 0;
+    // overflow: auto;
+    margin: auto;
 }
 .board-container-inside{ 
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+}
+.board-row{
+    display: flex;
 }

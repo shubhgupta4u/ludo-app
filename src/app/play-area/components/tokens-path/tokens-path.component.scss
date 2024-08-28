@@ -1,12 +1,4 @@
-@import '../../../../variables.scss';
-
-.path-vertical {
-    width: 18vw;
-}
-
-.path-horizontal {
-    width: 36vw;
-}
+@import '../../../../theme/variables.scss';
 
 .path-container-inside {
     display: flex;
@@ -14,8 +6,6 @@
 }
 
 .cell {
-    width: 6vw;
-    height: 6vw;
     border: 0.5px solid $border-color;
     vertical-align: middle;
     text-align: center;
@@ -42,8 +32,6 @@
     vertical-align: middle;
     text-align: center;
     margin: auto;
-    line-height: 6vw;
-    font-size: 3vw;
 }
 
 .icon-red {
@@ -60,3 +48,41 @@
 .icon-blue {
     color: $blue-player-color;
 }
+
+@media (min-aspect-ratio: 1/1) {
+    .path-vertical {
+        width: calc($landscape-board-home-size/2);
+    }
+    
+    .path-horizontal {
+        width: $landscape-board-home-size;
+    }
+    
+    .cell {
+        width: calc($landscape-board-home-size/6);
+        height: calc($landscape-board-home-size/6);
+    }
+    .icon {
+        line-height: calc($landscape-board-home-size/6);
+        font-size: calc($landscape-board-home-size/12);
+    }
+  }
+  
+  @media (max-aspect-ratio: 1/1) {
+    .path-vertical {
+        width: calc($board-home-size/2);
+    }
+    
+    .path-horizontal {
+        width: $board-home-size;
+    }
+    
+    .cell {
+        width: calc($board-home-size/6);
+        height: calc($board-home-size/6);
+    }
+    .icon {
+        line-height: calc($board-home-size/6);
+        font-size: calc($board-home-size/12);
+    }
+  }
