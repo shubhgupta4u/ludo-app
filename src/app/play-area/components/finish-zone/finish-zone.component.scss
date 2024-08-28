@@ -1,5 +1,8 @@
 @import '../../../../theme/variables.scss';
 
+.dice-container{
+	background-color: $home-background;
+}
 @media (min-aspect-ratio: 1/1) {
     .finish-container {
 		width: $landscape-finish-zone-size;
@@ -7,10 +10,15 @@
 	}
 	
 	.ludo_home {
-		border-left: calc($landscape-finish-zone-size/2) solid $red-player-color;
-		border-right: calc($landscape-finish-zone-size/2) solid $yellow-player-color;
-		border-top: calc($landscape-finish-zone-size/2) solid $green-player-color;
-		border-bottom: calc($landscape-finish-zone-size/2) solid $blue-player-color;
+		border-left: calc($landscape-finish-zone-size/3) solid $red-player-color;
+		border-right: calc($landscape-finish-zone-size/3) solid $yellow-player-color;
+		border-top: calc($landscape-finish-zone-size/3) solid $green-player-color;
+		border-bottom: calc($landscape-finish-zone-size/3) solid $blue-player-color;
+	}
+	.dice-container{
+		width:  calc($landscape-finish-zone-size/3);
+		height:calc($landscape-finish-zone-size/3);
+		margin: auto;
 	}
   }
   
@@ -21,9 +29,16 @@
 	}
 	
 	.ludo_home {
-		border-left: calc($finish-zone-size/2) solid $red-player-color;
-		border-right: calc($finish-zone-size/2) solid $yellow-player-color;
-		border-top: calc($finish-zone-size/2) solid $green-player-color;
-		border-bottom: calc($finish-zone-size/2) solid $blue-player-color;
+		border-left: calc($finish-zone-size/3) solid $red-player-color;
+		border-right: calc($finish-zone-size/3) solid $yellow-player-color;
+		border-top: calc($finish-zone-size/3) solid $green-player-color;
+		border-bottom: calc($finish-zone-size/3) solid $blue-player-color;
+	}
+	.dice-container{
+		width:  calc($finish-zone-size/3);
+		height:calc($finish-zone-size/3);
+		margin: auto;
 	}
   }
+
+  

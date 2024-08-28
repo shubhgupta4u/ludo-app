@@ -12,7 +12,7 @@
       <fa-icon class="icon icon-yellow" [icon]="faArrowLeft" *ngIf="(this.player == 4 && cellIndex==11)"></fa-icon>
       <fa-icon class="icon icon-blue" [icon]="faArrowUp" *ngIf="(this.player == 3 && cellIndex==16)"></fa-icon>
       <fa-icon class="icon" 
-      *ngIf="(this.player == 1 && cellIndex==14) || (this.player == 2 && cellIndex==6) || (this.player == 3 && cellIndex==11) || (this.player == 4 && cellIndex==3)" 
+      *ngIf="(this.player == 1 && (cellIndex==14 || cellIndex==1)) || (this.player == 2 && (cellIndex==6 || cellIndex==5)) || (this.player == 3 && (cellIndex==11 || cellIndex==12)) || (this.player == 4 && (cellIndex==3 || cellIndex==16))" 
       [icon]="faStar"></fa-icon>
 
     </div>

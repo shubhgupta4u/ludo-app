@@ -8,9 +8,16 @@ import { TokensPathComponent } from './components/tokens-path/tokens-path.compon
 import { PlayerHomeComponent } from './components/player-home/player-home.component';
 import { IonicModule } from '@ionic/angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TokenComponent } from './components/token/token.component';
 
 @NgModule({
-  declarations: [FinishZoneComponent,LudoBoardComponent,PlayerHomeComponent,TokensPathComponent],
+  declarations: [
+    FinishZoneComponent,
+    LudoBoardComponent,
+    PlayerHomeComponent,
+    TokensPathComponent,
+    TokenComponent
+  ],
   imports: [
     CommonModule,
     PlayAreaRoutingModule,
