@@ -6,25 +6,14 @@
 .home-container-inside{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     border: 1px solid $border-color;
     background-color: $home-background;
+    justify-content: space-around;
+    align-content: space-around;
 }
 .token-home{
     border-radius: 50%;
     border: 1px solid $border-color;
-}
-.red{
-    background-color: $red-player-color;
-}
-.yellow{
-    background-color: $yellow-player-color;
-}
-.green{
-    background-color: $green-player-color;
-}
-.blue{
-    background-color: $blue-player-color;
 }
 
 @media (min-aspect-ratio: 1/1) {

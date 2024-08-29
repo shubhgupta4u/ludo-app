@@ -6,9 +6,8 @@
     border-radius: 50% 50% 50% 0;
     padding: 0 3px 3px 0;
     position: relative;
-    left: 50%;
-    top: 25%;
-    margin: -2.2em 0 0 -1.3em;
+    top: -50%;
+    margin: auto;
     -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
     -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
     box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
@@ -16,28 +15,13 @@
     z-index: 2;
 }
 
-.red {
-    background: $red-player-color;
-}
-
-.yellow {
-    background: $yellow-player-color;
-}
-
-.green {
-    background: $green-player-color;
-}
-
-.blue {
-    background: $blue-player-color;
-}
-
 .marker:after {
     content: '';
-    width: 1em;
-    height: 1em;
-    margin: 1em 0 0 1em;
-    background: #ffffff;
+    margin: auto;
+    left: 25%;
+    top: 25%;
+    display: inline;
+    background: $home-background;
     position: absolute;
     border-radius: 50%;
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
@@ -46,6 +30,7 @@
     -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
     -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
     box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    z-index: 20;
 }
 
 .beacon {
@@ -111,14 +96,22 @@
 
 @media (min-aspect-ratio: 1/1) {
     .marker {
-        width: calc($landscape-token-home-size * 2/3);
-        height: calc($landscape-token-home-size * 2/3);
+        width: calc($landscape-token-home-size * 2.5/3);
+        height: calc($landscape-token-home-size * 2.5/3);
+    }
+    .marker:after{
+        width: calc($landscape-token-home-size * 2/6);
+        height: calc($landscape-token-home-size * 2/6);
     }
   }
   
   @media (max-aspect-ratio: 1/1) {
     .marker {
-        width: calc($token-home-size * 2/3);
-        height: calc($token-home-size * 2/3);
+        width: calc($token-home-size * 2.5/3);
+        height: calc($token-home-size * 2.5/3);
+    }
+    .marker:after{
+        width: calc($token-home-size * 2/6);
+        height: calc($token-home-size * 2/6);
     }
   }
