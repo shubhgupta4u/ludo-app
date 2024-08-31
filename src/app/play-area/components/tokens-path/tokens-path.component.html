@@ -1,18 +1,19 @@
-<div class="path-container" [ngClass]="{'path-vertical': this.player == 2|| this.player == 3,'path-horizontal': this.player == 1|| this.player == 4}">
+<div class="path-container" [ngClass]="{'path-vertical': this.player == 2|| this.player == 4,'path-horizontal': this.player == 1|| this.player == 3}">
   <div class="path-container-inside">
-    <div class="cell" [attr.id]="getName(player, cellIndex)" *ngFor="let cell of cells; let cellIndex = index" [ngClass]="{'red': this.player == 1 && [1,7,8,9,10,11].indexOf(cellIndex)>=0,
+    <div class="cell" [attr.id]="getName(player, cellIndex)" 
+    *ngFor="let cell of cells; let cellIndex = index" [ngClass]="{'red': this.player == 1 && [1,7,8,9,10,11].indexOf(cellIndex)>=0,
     'green': this.player == 2 && [5,4,7,10,13,16].indexOf(cellIndex)>=0,
-    'yellow': this.player == 4 && [16,6,7,8,9,10].indexOf(cellIndex)>=0,
-    'blue': this.player == 3 && [12,1,4,7,10,13].indexOf(cellIndex)>=0  
+    'yellow': this.player == 3 && [16,6,7,8,9,10].indexOf(cellIndex)>=0,
+    'blue': this.player == 4 && [12,1,4,7,10,13].indexOf(cellIndex)>=0  
   }"> 
-  <!-- {{cellIndex}} -->
+   <!-- {{cellIndex}}  -->
    
       <fa-icon class="icon icon-red" [icon]="faArrowRight" *ngIf="(this.player == 1 && cellIndex==6)"></fa-icon>
       <fa-icon class="icon icon-green" [icon]="faArrowDown" *ngIf="(this.player == 2 && cellIndex==1)"></fa-icon>
-      <fa-icon class="icon icon-yellow" [icon]="faArrowLeft" *ngIf="(this.player == 4 && cellIndex==11)"></fa-icon>
-      <fa-icon class="icon icon-blue" [icon]="faArrowUp" *ngIf="(this.player == 3 && cellIndex==16)"></fa-icon>
+      <fa-icon class="icon icon-yellow" [icon]="faArrowLeft" *ngIf="(this.player == 3 && cellIndex==11)"></fa-icon>
+      <fa-icon class="icon icon-blue" [icon]="faArrowUp" *ngIf="(this.player == 4 && cellIndex==16)"></fa-icon>
       <fa-icon class="icon" 
-      *ngIf="(this.player == 1 && (cellIndex==14 || cellIndex==1)) || (this.player == 2 && (cellIndex==6 || cellIndex==5)) || (this.player == 3 && (cellIndex==11 || cellIndex==12)) || (this.player == 4 && (cellIndex==3 || cellIndex==16))" 
+      *ngIf="(this.player == 1 && (cellIndex==14 || cellIndex==1)) || (this.player == 2 && (cellIndex==6 || cellIndex==5)) || (this.player == 4 && (cellIndex==11 || cellIndex==12)) || (this.player == 3 && (cellIndex==3 || cellIndex==16))" 
       [icon]="faStar"></fa-icon>
 
     </div>

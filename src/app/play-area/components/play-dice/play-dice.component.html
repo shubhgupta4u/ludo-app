@@ -1,37 +1,93 @@
 <div class="dice-container-inside">
   <div #cube id="cube" (click)="diceclickhandler()">
-    <div class="front">
-      <span class="dot dot1"></span>
+    <div class="face front"
+    [ngClass]="{'red': this.player == 1,
+      'green': this.player == 2,
+      'yellow': this.player == 3,
+      'blue': this.player == 4     
+    }">
+      <div class="front-row">
+        <span class="dot dot1"></span>
+      </div>
     </div>
-    <div class="back">
-      <span class="dot dot1"></span>
-      <span class="dot dot2"></span>
+    <div class="face back"
+    [ngClass]="{'red': this.player == 1,
+      'green': this.player == 2,
+      'yellow': this.player == 3,
+      'blue': this.player == 4     
+    }">
+      <div class="back-row">
+        <span class="dot dot1"></span>
+        <span class="dot dot2"></span>
+      </div>
     </div>
-    <div class="right">
-      <span class="dot dot1"></span>
-      <span class="dot dot2"></span>  
-      <span class="dot dot3"></span>
+    <div class="face right"
+    [ngClass]="{'red': this.player == 1,
+      'green': this.player == 2,
+      'yellow': this.player == 3,
+      'blue': this.player == 4     
+    }">
+      <div class="right-row">
+        <span>&nbsp;</span>
+        <span class="dot dot1"></span>
+      </div>
+      <div class="right-row">
+        <span class="dot dot2"></span>
+      </div>
+      <div class="right-row">
+        <span class="dot dot3"></span>
+        <span>&nbsp;</span>
+      </div>
     </div>
-    <div class="left">
-      <span class="dot dot1"></span>
-      <span class="dot dot2"></span>  
-      <span class="dot dot3"></span>
-      <span class="dot dot4"></span>
+    <div class="face left"
+    [ngClass]="{'red': this.player == 1,
+      'green': this.player == 2,
+      'yellow': this.player == 3,
+      'blue': this.player == 4     
+    }">
+      <div class="left-row">
+        <span class="dot dot1"></span>
+        <span class="dot dot2"></span>
+      </div>
+      <div class="left-row">
+        <span class="dot dot3"></span>
+        <span class="dot dot4"></span>
+      </div>
     </div>
-    <div class="top">
-      <span class="dot dot1"></span>
-      <span class="dot dot2"></span>  
-      <span class="dot dot3"></span>
-      <span class="dot dot4"></span>
-      <span class="dot dot5"></span>
+    <div class="face top"
+    [ngClass]="{'red': this.player == 1,
+      'green': this.player == 2,
+      'yellow': this.player == 3,
+      'blue': this.player == 4     
+    }">
+      <div class="top-row">
+        <span class="dot dot1"></span>
+        <span class="dot dot2"></span>
+      </div>
+      <div class="top-row">
+        <span class="dot dot3"></span>
+      </div>
+      <div class="top-row">
+        <span class="dot dot4"></span>
+        <span class="dot dot5"></span>
+      </div>
     </div>
-    <div class="bottom">
-      <span class="dot dot1"></span>
-      <span class="dot dot2"></span>  
-      <span class="dot dot3"></span>
-      <span class="dot dot4"></span>
-      <span class="dot dot5"></span>
-      <span class="dot dot6"></span>
+    <div class="face bottom"
+    [ngClass]="{'red': this.player == 1,
+      'green': this.player == 2,
+      'yellow': this.player == 3,
+      'blue': this.player == 4     
+    }">
+      <div class="bottom-row">
+        <span class="dot dot1"></span>
+        <span class="dot dot2"></span>
+        <span class="dot dot3"></span>
+      </div>
+      <div class="bottom-row">
+        <span class="dot dot4"></span>
+        <span class="dot dot5"></span>
+        <span class="dot dot6"></span>
+      </div>
     </div>
   </div>
 </div>

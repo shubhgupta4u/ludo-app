@@ -1,65 +1,18 @@
 @import '../../../../theme/variables.scss';
+
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
-#cube .front {
-  transform: 
-    translateZ(25px);
-}
-
-#cube .back {
-  transform: 
-    rotateX(-180deg)
-    translateZ(25px);
-}
-
-#cube .right {
-  transform:
-    rotateY(90deg)
-    translateZ(25px);
-}
-
-#cube .left {
-  transform:
-    rotateY(-90deg)
-    translateZ(25px);
-}
-
-#cube .top {
-  transform:
-    rotateX(90deg)
-    translateZ(25px);
-}
-
-#cube .bottom {
-  transform:
-    rotateX(-90deg)
-    translateZ(25px);
-}
 
 .dice-container-inside {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  // margin: 0 auto 40px;
-  margin: auto;
-  border: 1px solid #FFF;
-  
-  // perspective: 1000px;
-  // perspective-origin: 50% 100%;
   z-index: 150;
 }
 
 #cube {
-  width: 50px;
-  height: 50px;
-  // top: 100px;
   position: absolute;
-  
   transform-style: preserve-3d;
-  
   transition: transform 6s;
 }
 
@@ -67,69 +20,163 @@ h1 {
   cursor: pointer;
 }
 
-#cube div {
-  background: orangered;
-  display: block;
+#cube div.face {
+  // background: orangered;
   position: absolute;
-  width: 50px;
-  height: 50px;
-  border: 2px solid orangered;
-  
-  // margin: 0 auto;  
+  border: 2px solid gold;
   margin: auto;
-
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 150%;
+  // font-size: 150%;
   text-align: center;
-  padding: 12.5px 0;
 }
 
 .dot {
+  background: black;
+  border-radius: 15px;
   display: block;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  border-radius: 15px;  
 }
 
-.front .dot1 { top: 21.25px; left: 21.25px; }
-.back .dot1 { top: 11.25px; left: 11.25px; }
-.back .dot2 { top: 31.25px; left: 31.25px; }
-.right .dot1 { top: 11.25px; left: 11.25px; }
-.right .dot2 { top: 21.25px; left: 21.25px; }
-.right .dot3 { top: 31.25px; left: 31.25px; }
-.left .dot1 { top: 11.25px; left: 11.25px; }
-.left .dot2 { top: 11.25px; left: 31.25px; }
-.left .dot3 { top: 31.25px; left: 11.25px; }
-.left .dot4 { top: 31.25px; left: 31.25px; }
-.top .dot1 { top: 11.25px; left: 11.25px; }
-.top .dot2 { top: 11.25px; left: 31.25px; }
-.top .dot3 { top: 21.25px; left: 21.25px; }
-.top .dot4 { top: 31.25px; left: 11.25px; }
-.top .dot5 { top: 31.25px; left: 31.25px; }
-.bottom .dot1 { top: 11.25px; left: 11.25px; }
-.bottom .dot2 { top: 11.25px; left: 21.25px; }
-.bottom .dot3 { top: 11.25px; left: 31.25px; }
-.bottom .dot4 { top: 31.25px; left: 11.25px; }
-.bottom .dot5 { top: 31.25px; left: 21.25px; }
-.bottom .dot6 { top: 31.25px; left: 31.25px; }
+.face {
+  display: flex;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .right-row {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .right-row:nth-child(1) {
+    align-items: end;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left,
+.bottom,
+.back,
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.left-row,
+.bottom-row,
+.top-row,
+.back-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.front-row {
+  display: flex;
+  justify-content: center;
+}
 
 @media (min-aspect-ratio: 1/1) {
-//   .finish-container {
-//   width: $landscape-finish-zone-size;
-//   height: $landscape-finish-zone-size;
-// }
 
-// .ludo_home {
-//   border-left: calc($landscape-finish-zone-size/4) solid $red-player-color;
-//   border-right: calc($landscape-finish-zone-size/4) solid $yellow-player-color;
-//   border-top: calc($landscape-finish-zone-size/4) solid $green-player-color;
-//   border-bottom: calc($landscape-finish-zone-size/4) solid $blue-player-color;
-// }
-// .dice-container{
-//   width:  calc($landscape-finish-zone-size/4);
-//   height:calc($landscape-finish-zone-size/2);
-//   margin: auto;
-// }
+  .dice-container-inside,
+  #cube {
+    width: $landscape-dice-size;
+    height: $landscape-dice-size;
+  }
+
+  .face {
+    width: $landscape-dice-size;
+    height: $landscape-dice-size;
+  }
+
+  .dot {
+    width: calc($landscape-dice-size/5);
+    height: calc($landscape-dice-size/5);
+  }
+
+  #cube .front {
+    transform:
+      translateZ(calc($landscape-dice-size/2));
+  }
+
+  #cube .back {
+    transform:
+      rotateX(-180deg) translateZ(calc($landscape-dice-size/2));
+  }
+
+  #cube .right {
+    transform:
+      rotateY(90deg) translateZ(calc($landscape-dice-size/2));
+  }
+
+  #cube .left {
+    transform:
+      rotateY(-90deg) translateZ(calc($landscape-dice-size/2));
+  }
+
+  #cube .top {
+    transform:
+      rotateX(90deg) translateZ(calc($landscape-dice-size/2));
+  }
+
+  #cube .bottom {
+    transform:
+      rotateX(-90deg) translateZ(calc($landscape-dice-size/2));
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+
+  .dice-container-inside,
+  #cube {
+    width: $dice-size;
+    height: $dice-size;
+  }
+
+  .face {
+    width: $dice-size;
+    height: $dice-size;
+  }
+
+  .dot {
+    width: calc($dice-size/5);
+    height: calc($dice-size/5);
+  }
+
+  #cube .front {
+    transform:
+      translateZ(calc($dice-size/2));
+  }
+
+  #cube .back {
+    transform:
+      rotateX(-180deg) translateZ(calc($dice-size/2));
+  }
+
+  #cube .right {
+    transform:
+      rotateY(90deg) translateZ(calc($dice-size/2));
+  }
+
+  #cube .left {
+    transform:
+      rotateY(-90deg) translateZ(calc($dice-size/2));
+  }
+
+  #cube .top {
+    transform:
+      rotateX(90deg) translateZ(calc($dice-size/2));
+  }
+
+  #cube .bottom {
+    transform:
+      rotateX(-90deg) translateZ(calc($dice-size/2));
+  }
 }

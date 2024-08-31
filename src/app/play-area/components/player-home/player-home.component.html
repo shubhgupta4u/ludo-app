@@ -1,38 +1,39 @@
 <div class="home-container" [ngClass]="{'red': this.player == 1,
   'green': this.player == 2,
-  'yellow': this.player == 4,
-  'blue': this.player == 3     
+  'yellow': this.player == 3,
+  'blue': this.player == 4     
 }">
   <div class="home-container-inside">
     <div class="token-home" [ngClass]="{'red': this.player == 1,
     'green': this.player == 2,
-    'yellow': this.player == 4,
-    'blue': this.player == 3     
+    'yellow': this.player == 3,
+    'blue': this.player == 4     
   }">
-      <app-token [player]="player"></app-token>
+      <app-token [token]="1" [player]="player"></app-token>
     </div>
 
     <div class="token-home" [ngClass]="{'red': this.player == 1,
     'green': this.player == 2,
-    'yellow': this.player == 4,
-    'blue': this.player == 3     
+    'yellow': this.player == 3,
+    'blue': this.player == 4     
   }">
-      <app-token [player]="player"></app-token>
-    </div>
-    <div class="token-home" [ngClass]="{'red': this.player == 1,
-    'green': this.player == 2,
-    'yellow': this.player == 4,
-    'blue': this.player == 3     
-  }">
-      <app-token [player]="player"></app-token>
+      <app-token [token]="2" [player]="player"></app-token>
     </div>
 
     <div class="token-home" [ngClass]="{'red': this.player == 1,
     'green': this.player == 2,
-    'yellow': this.player == 4,
-    'blue': this.player == 3     
+    'yellow': this.player == 3,
+    'blue': this.player == 4     
   }">
-      <app-token [player]="player"></app-token>
+      <app-token [token]="3" [player]="player"></app-token>
+    </div>
+
+    <div class="token-home" [ngClass]="{'red': this.player == 1,
+    'green': this.player == 2,
+    'yellow': this.player == 3,
+    'blue': this.player == 4     
+  }">
+      <app-token [token]="4" [player]="player"></app-token>
     </div>
   </div>
 </div>

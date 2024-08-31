@@ -1,44 +1,48 @@
 @import '../../../../theme/variables.scss';
 
-.dice-container{
+.dice-container {
 	background-color: $home-background;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
 @media (min-aspect-ratio: 1/1) {
-    .finish-container {
+	.finish-container {
 		width: $landscape-finish-zone-size;
 		height: $landscape-finish-zone-size;
 	}
-	
+
 	.ludo_home {
 		border-left: calc($landscape-finish-zone-size/4) solid $red-player-color;
 		border-right: calc($landscape-finish-zone-size/4) solid $yellow-player-color;
 		border-top: calc($landscape-finish-zone-size/4) solid $green-player-color;
 		border-bottom: calc($landscape-finish-zone-size/4) solid $blue-player-color;
 	}
-	.dice-container{
-		width:  calc($landscape-finish-zone-size/2);
-		height:calc($landscape-finish-zone-size/2);
+
+	.dice-container {
+		width: calc($landscape-finish-zone-size/2);
+		height: calc($landscape-finish-zone-size/2);
 		margin: auto;
 	}
-  }
-  
-  @media (max-aspect-ratio: 1/1) {
-    .finish-container {
+}
+
+@media (max-aspect-ratio: 1/1) {
+	.finish-container {
 		width: $finish-zone-size;
 		height: $finish-zone-size;
 	}
-	
+
 	.ludo_home {
 		border-left: calc($finish-zone-size/4) solid $red-player-color;
 		border-right: calc($finish-zone-size/4) solid $yellow-player-color;
 		border-top: calc($finish-zone-size/4) solid $green-player-color;
 		border-bottom: calc($finish-zone-size/4) solid $blue-player-color;
 	}
-	.dice-container{
-		width:  calc($finish-zone-size/2);
-		height:calc($finish-zone-size/2);
+
+	.dice-container {
+		width: calc($finish-zone-size/2);
+		height: calc($finish-zone-size/2);
 		margin: auto;
 	}
-  }
-
-  
+}

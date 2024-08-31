@@ -35,10 +35,7 @@
 
 .beacon {
     position: relative;
-    top: 10%;
-    left: 12%;
-    height: 3em;
-    width: 3em;
+    top: -85%;
     border-radius: 50%;
     -webkit-transform: translateX(-50%);
     -o-transform: translateX(-50%);
@@ -52,13 +49,11 @@
   .beacon:after {
     position: absolute;
     content: "";
-    height: 3em;
-    width: 3em;
     left: 0;
     top: 0;
     background-color: transparent;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px black;
+    box-shadow: 0 0 0 4px black;
     -webkit-animation: active 2s infinite linear;
     -moz-animation: active 2s infinite linear;
     animation: active 2s infinite linear;
@@ -103,6 +98,15 @@
         width: calc($landscape-token-home-size * 2/6);
         height: calc($landscape-token-home-size * 2/6);
     }
+    .beacon {
+        width: $landscape-token-home-size;
+        height: $landscape-token-home-size;
+      }
+      .beacon:before,
+      .beacon:after {
+        width: $landscape-token-home-size;
+        height: $landscape-token-home-size;
+      }
   }
   
   @media (max-aspect-ratio: 1/1) {
@@ -114,4 +118,14 @@
         width: calc($token-home-size * 2/6);
         height: calc($token-home-size * 2/6);
     }
+    .beacon {
+        width: $token-home-size;
+        height: $token-home-size;
+      }
+      .beacon:before,
+      .beacon:after {
+        width: $token-home-size;
+        height: $token-home-size;
+      }
+  
   }
