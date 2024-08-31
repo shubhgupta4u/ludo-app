@@ -1,7 +1,14 @@
-<div class="marker" (click)="tokenMoveHandler()"
-[ngClass]="{'red': this.player == 1,
+<div class="marker" (click)="tokenMoveHandler()" [ngClass]="{'red': this.player == 1,
     'green': this.player == 2,
     'yellow': this.player == 3,
-    'blue': this.player == 4 }"
-    ></div>
-<span class="beacon" *ngIf="showBeacon"></span>
+    'blue': this.player == 4 }"></div>
+
+<div class="beacon-container" *ngIf="showBeacon">
+    <div class="circles-wrapper">
+        <div class="circle circle-lg">
+            <div class="circle circle-md">
+                <div class="circle circle-sm"></div>
+            </div>
+        </div>
+    </div>
+</div>

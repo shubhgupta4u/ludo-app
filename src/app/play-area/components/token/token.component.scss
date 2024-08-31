@@ -6,7 +6,7 @@
     border-radius: 50% 50% 50% 0;
     padding: 0 3px 3px 0;
     position: relative;
-    top: -50%;
+    top: -80%;
     margin: auto;
     -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
     -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
@@ -33,59 +33,61 @@
     z-index: 20;
 }
 
-.beacon {
+
+.beacon-container {
     position: relative;
+    display: flex;
     top: -85%;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    border: 4px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    -webkit-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    z-index: 1
-  }
-  
-  .beacon:before,
-  .beacon:after {
+    position: relative;
+}
+
+.circle::before {
+    content: '';
     position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    background-color: transparent;
+    background: #fff;
+    top: -6px;
     border-radius: 50%;
-    box-shadow: 0 0 0 4px black;
-    -webkit-animation: active 2s infinite linear;
-    -moz-animation: active 2s infinite linear;
-    animation: active 2s infinite linear;
-  }
-
-.beacon:after {
-    -moz-animation-delay: 1s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    box-shadow: 0 0 10px 6px purple
 }
 
-@-webkit-keyframes active {
-    0% {
-        -webkit-transform: scale(.1);
-        opacity: 1;
-    }
-
-    100% {
-        -webkit-transform: scale(1);
-        opacity: 0;
-    }
+.circle-lg {
+    animation: rotateCircles 7s linear infinite;
 }
 
-@keyframes active {
-    0% {
-        transform: scale(.1);
-        opacity: 1;
+.circle-md {
+    animation: rotateCircles 5s linear infinite;
+}
+
+
+.circle-sm {
+    animation: rotateCircles 3s linear infinite;
+}
+
+.circle-sm::before,.circle-md::before,.circle::before {
+    max-width: 10px;
+    max-height: 10px;
+    min-width: 5px;
+    min-height: 5px;
+}
+
+
+@keyframes rotateCircles {
+    from {
+        transform: rotate(0);
     }
 
-    100% {
-        transform: scale(1);
-        opacity: 0;
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -94,38 +96,61 @@
         width: calc($landscape-token-home-size * 2.5/3);
         height: calc($landscape-token-home-size * 2.5/3);
     }
-    .marker:after{
+
+    .marker:after {
         width: calc($landscape-token-home-size * 2/6);
         height: calc($landscape-token-home-size * 2/6);
     }
-    .beacon {
+
+    .circles-wrapper,
+    .circle-lg {
         width: $landscape-token-home-size;
         height: $landscape-token-home-size;
-      }
-      .beacon:before,
-      .beacon:after {
-        width: $landscape-token-home-size;
-        height: $landscape-token-home-size;
-      }
-  }
-  
-  @media (max-aspect-ratio: 1/1) {
+    }
+
+    .circle-md {
+        width: calc($landscape-token-home-size * 3/4);
+        height: calc($landscape-token-home-size * 3/4);
+    }
+
+    .circle-sm {
+        width: calc($landscape-token-home-size * 1/2);
+        height: calc($landscape-token-home-size * 1/2);
+    }
+    .circle-sm::before,.circle-md::before,.circle::before {
+        width: calc($landscape-token-home-size * 1/10);
+        height: calc($landscape-token-home-size * 1/10);
+    }
+}
+
+@media (max-aspect-ratio: 1/1) {
     .marker {
         width: calc($token-home-size * 2.5/3);
         height: calc($token-home-size * 2.5/3);
     }
-    .marker:after{
+
+    .marker:after {
         width: calc($token-home-size * 2/6);
         height: calc($token-home-size * 2/6);
     }
-    .beacon {
+
+    .circles-wrapper,
+    .circle-lg {
         width: $token-home-size;
         height: $token-home-size;
-      }
-      .beacon:before,
-      .beacon:after {
-        width: $token-home-size;
-        height: $token-home-size;
-      }
-  
-  }
+    }
+
+    .circle-md {
+        width: calc($token-home-size * 3/4);
+        height: calc($token-home-size * 3/4);
+    }
+
+    .circle-sm {
+        width: calc($token-home-size * 1/2);
+        height: calc($token-home-size * 1/2);
+    }
+    .circle-sm::before,.circle-md::before,.circle::before {
+        width: calc($token-home-size * 1/10);
+        height: calc($token-home-size * 1/10);
+    }
+}
