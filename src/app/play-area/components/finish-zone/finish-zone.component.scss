@@ -10,14 +10,14 @@
 	}
 	
 	.ludo_home {
-		border-left: calc($landscape-finish-zone-size/3) solid $red-player-color;
-		border-right: calc($landscape-finish-zone-size/3) solid $yellow-player-color;
-		border-top: calc($landscape-finish-zone-size/3) solid $green-player-color;
-		border-bottom: calc($landscape-finish-zone-size/3) solid $blue-player-color;
+		border-left: calc($landscape-finish-zone-size/4) solid $red-player-color;
+		border-right: calc($landscape-finish-zone-size/4) solid $yellow-player-color;
+		border-top: calc($landscape-finish-zone-size/4) solid $green-player-color;
+		border-bottom: calc($landscape-finish-zone-size/4) solid $blue-player-color;
 	}
 	.dice-container{
-		width:  calc($landscape-finish-zone-size/3);
-		height:calc($landscape-finish-zone-size/3);
+		width:  calc($landscape-finish-zone-size/4);
+		height:calc($landscape-finish-zone-size/2);
 		margin: auto;
 	}
   }
@@ -29,14 +29,14 @@
 	}
 	
 	.ludo_home {
-		border-left: calc($finish-zone-size/3) solid $red-player-color;
-		border-right: calc($finish-zone-size/3) solid $yellow-player-color;
-		border-top: calc($finish-zone-size/3) solid $green-player-color;
-		border-bottom: calc($finish-zone-size/3) solid $blue-player-color;
+		border-left: calc($finish-zone-size/4) solid $red-player-color;
+		border-right: calc($finish-zone-size/4) solid $yellow-player-color;
+		border-top: calc($finish-zone-size/4) solid $green-player-color;
+		border-bottom: calc($finish-zone-size/4) solid $blue-player-color;
 	}
 	.dice-container{
-		width:  calc($finish-zone-size/3);
-		height:calc($finish-zone-size/3);
+		width:  calc($finish-zone-size/4);
+		height:calc($finish-zone-size/2);
 		margin: auto;
 	}
   }

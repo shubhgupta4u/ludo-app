@@ -43,12 +43,12 @@
     }
     
     .cell {
-        width: calc($landscape-board-home-size/6);
-        height: calc($landscape-board-home-size/6);
+        width: $landscape-cell-size;
+        height: $landscape-cell-size;
     }
     .icon {
-        line-height: calc($landscape-board-home-size/6);
-        font-size: calc($landscape-board-home-size/12);
+        line-height: $landscape-cell-size;
+        font-size:calc($landscape-board-home-size/12);
     }
   }
   
@@ -62,11 +62,11 @@
     }
     
     .cell {
-        width: calc($board-home-size/6);
-        height: calc($board-home-size/6);
+        width:$cell-size;
+        height: $cell-size;
     }
     .icon {
-        line-height: calc($board-home-size/6);
+        line-height:$cell-size;
         font-size: calc($board-home-size/12);
     }
   }
