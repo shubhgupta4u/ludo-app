@@ -1,6 +1,6 @@
 <div class="dice-container-inside">
   <div #cube id="cube" (click)="diceclickhandler()">
-    <div class="face front"
+    <div #one class="face front"
     [ngClass]="{'red': this.player == 1,
       'green': this.player == 2,
       'yellow': this.player == 3,
@@ -10,7 +10,7 @@
         <span class="dot dot1"></span>
       </div>
     </div>
-    <div class="face back"
+    <div #two class="face back"
     [ngClass]="{'red': this.player == 1,
       'green': this.player == 2,
       'yellow': this.player == 3,
@@ -21,7 +21,7 @@
         <span class="dot dot2"></span>
       </div>
     </div>
-    <div class="face right"
+    <div #three class="face right"
     [ngClass]="{'red': this.player == 1,
       'green': this.player == 2,
       'yellow': this.player == 3,
@@ -39,7 +39,7 @@
         <span>&nbsp;</span>
       </div>
     </div>
-    <div class="face left"
+    <div #four class="face left"
     [ngClass]="{'red': this.player == 1,
       'green': this.player == 2,
       'yellow': this.player == 3,
@@ -54,7 +54,7 @@
         <span class="dot dot4"></span>
       </div>
     </div>
-    <div class="face top"
+    <div #five class="face top"
     [ngClass]="{'red': this.player == 1,
       'green': this.player == 2,
       'yellow': this.player == 3,
@@ -72,7 +72,7 @@
         <span class="dot dot5"></span>
       </div>
     </div>
-    <div class="face bottom"
+    <div #six class="face bottom"
     [ngClass]="{'red': this.player == 1,
       'green': this.player == 2,
       'yellow': this.player == 3,
