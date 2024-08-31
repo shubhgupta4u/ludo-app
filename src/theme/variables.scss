@@ -31,6 +31,7 @@ $board-home-size: string.insert(#{36}, $width-mode, 100);
 $board-home-inner-size: string.insert(#{24}, $width-mode, 100);
 $token-home-size: string.insert(#{7}, $width-mode, 100);
 $finish-zone-size: string.insert(#{18}, $width-mode, 100);
+$dice-size: string.insert(#{18}, $width-mode, 100);
 $cell-size: calc($board-home-size/6);
 
 $landscape-width-mode: "vh";
@@ -39,4 +40,5 @@ $landscape-board-home-size: string.insert(#{36}, $landscape-width-mode, 100);
 $landscape-board-home-inner-size: string.insert(#{24}, $landscape-width-mode, 100);
 $landscape-token-home-size: string.insert(#{7}, $landscape-width-mode, 100);
 $landscape-finish-zone-size: string.insert(#{18}, $landscape-width-mode, 100);
+$landscape-dice-size: string.insert(#{18}, $landscape-width-mode, 100);
 $landscape-cell-size: calc($landscape-board-home-size/6);

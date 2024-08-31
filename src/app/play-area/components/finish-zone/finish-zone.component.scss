@@ -16,7 +16,7 @@
 		border-bottom: calc($landscape-finish-zone-size/4) solid $blue-player-color;
 	}
 	.dice-container{
-		width:  calc($landscape-finish-zone-size/4);
+		width:  calc($landscape-finish-zone-size/2);
 		height:calc($landscape-finish-zone-size/2);
 		margin: auto;
 	}
@@ -35,7 +35,7 @@
 		border-bottom: calc($finish-zone-size/4) solid $blue-player-color;
 	}
 	.dice-container{
-		width:  calc($finish-zone-size/4);
+		width:  calc($finish-zone-size/2);
 		height:calc($finish-zone-size/2);
 		margin: auto;
 	}
